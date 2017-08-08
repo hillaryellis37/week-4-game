@@ -1,5 +1,9 @@
+body {
+	background-image: url(../images/skulls.png);
+}
+
 .section {
-	height: 25%;
+	height: 35%;
 	width: 25%;
 /*	background-color: yellow;*/
 
@@ -10,6 +14,10 @@
 	display: flex;
 	justify-content: space-between;
 /*	background-color: yellow;*/
+}
+
+.castle-container { 
+	background-image: url(http://img00.deviantart.net/6f74/i/2013/158/a/f/background__ponyville_outskirts__s02e17__by_crasydwarf-d5v2ehm.png);
 }
 
 .subtext {

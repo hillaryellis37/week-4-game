@@ -14,13 +14,44 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
+//>>> This function returns true if the letter has already been guessed by the user.
+function numberInArray(array, value) {
+	var count = 0 
+	for (var i = 0; i < array.length; i++) {
+		if (array[i] == value) count++;
+	}
+	if (count === 2) {
+		console.log(array);
+		array.pop();
+		console.log(count===2);
+		console.log(array);
+		return true;
+	}	
+	else {
+		return false;
+		console.log(array);
+	}
+}
+
+
 function generateCrystalNumber() {
 	var count = 0;
 	for (var i = 1; crystalNumberArray.length < 4; i++) {
 		var crystalId = $("#crystal" + i);	
 		crystalId.attr('value', getRandomIntInclusive(1,12));
 		var crystalNum = crystalId.attr('value');
-		crystalNumberArray.push(crystalNum);	
+		crystalNumberArray.push(crystalNum);
+		crystalNum = crystalNumberArray[crystalNumberArray.length - 1];
+	
+		if (numberInArray(crystalNumberArray, crystalNum)) {
+			numberInArray(crystalNumberArray, crystalNum);
+			crystalId.attr('value', getRandomIntInclusive(1,12));			
+			crystalNum = crystalId.attr('value');
+			crystalNumberArray.push(crystalNum);
+			crystalNum = crystalNumberArray[crystalNumberArray.length];
+		}
+
+		console.log(crystalNumberArray);
 	}
 }
 
