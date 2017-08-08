@@ -1,0 +1,22 @@
+.section {
+	height: 25%;
+	width: 25%;
+/*	background-color: yellow;*/
+
+}
+
+.castle-container, 
+.crystal-container {
+	display: flex;
+	justify-content: space-between;
+/*	background-color: yellow;*/
+}
+
+.subtext {
+/*	font-family: 'Amatic SC', cursive;
+	font-family: 'Sacramento', cursive;
+	font-family: 'Schoolbell', cursive;
+	font-family: 'Fontdiner Swanky', cursive;*/
+	font-family: 'Loved by the King', cursive;
+	font-size: 18pt;
+}

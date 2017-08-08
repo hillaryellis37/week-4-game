@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crystal Game</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fontdiner+Swanky|Loved+by+the+King|Sacramento|Schoolbell" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <h1>Crystals Collector!</h1>
+  
+  <div class="container"> 
+    
+    <div class="row">
+      <div class="col-md-4"> 
+        <div class="subtext" id="random_start_number">number here</div>
+      </div> 
+      <div class="col-md-8">
+        <p class="instuctions"> You will be given a random number at the start of the game.<br><br>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br><br>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. <br><br>The value of each crystal is hidden from you until you click on it.<br><br>Each time when the game starts, the game will change the values of each crystal.</p>
+      </div>
+    </div> 
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="castle-container">
+          <div class="section" id="pony-img">
+            <img class="img-responsive" src="https://s-media-cache-ak0.pinimg.com/originals/e2/ad/a2/e2ada2a98de81e68b1b8fd91c572b8fb.png">
+          </div class="section">
+          <div id="path">
+          </div>       
+          <div class="section" id="castle-img">
+            <img class="img-responsive" src="http://pre08.deviantart.net/5fef/th/pre/i/2015/113/a/d/the_crystal_palace_by_earthstar01-d5liafb.png" alt="castle">
+          </div>  
+        </div>  
+      </div>
+    </div>
+
+    <div class="row">     
+      <div class="col-md-3">
+        <div class="section">
+          <p class="subtext">Current score:</p>
+          <div id="total_score"></div>    
+        </div>
+      </div>
+     
+      <div class="col-md-6">
+        <div class="crystal-container images">
+          <img id="crystal1" class="section img-responsive crystals-grp" src="http://clipartix.com/wp-content/uploads/2016/04/Clipart-blue-diamond.png" alt="crystal1">
+          <img id="crystal2" class="section img-responsive crystals-grp" src="http://orig08.deviantart.net/e875/f/2016/178/4/d/crystal_heart__vector__by_chrzanek97-d9zdd48.png" alt="crystal2">
+          <img id="crystal3" class="section img-responsive crystals-grp" src="http://pre09.deviantart.net/69af/th/pre/f/2014/211/c/3/resources__crystal_heart_by_lpsfreak-d7t0coe.png" alt="crystal3">
+          <img id="crystal4" class="section img-responsive crystals-grp" src="http://pre09.deviantart.net/69af/th/pre/f/2014/211/c/3/resources__crystal_heart_by_lpsfreak-d7t0coe.png" alt="crystal4">
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="section" id="wins_losses_box">
+          <div id="wins_section">
+            <p class="subtext" id="wins">Wins: </p>  
+          </div>
+          <div id="losses_section">
+            <p class="subtext" id="losses">Losses: </p> 
+          </div> 
+        </div>
+      </div>
+       
+    </div>
+  
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+  
+  </body>
+</html>
