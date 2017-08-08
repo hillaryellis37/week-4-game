@@ -1,12 +1,12 @@
 var crystalNumberArray = [];
-
-var crystalOne = parseInt(crystalNumberArray[0]);
-var crystalTwo = parseInt(crystalNumberArray[1]);
-var crystalThree = parseInt(crystalNumberArray[2]);
-var crystalFour = parseInt(crystalNumberArray[3]);
 var totalScore = 0;
 var wins = 0;
 var losses = 0;
+var randomNum = 0;
+var numDOM = $("#random_start_number");
+var scoreDOM = $("#total_score");
+var lossDOM = $("#losses");
+var winDOM = $("#wins");
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -25,21 +25,42 @@ function generateCrystalNumber() {
 }
 
 function generateGameStartNumber() {
-	var numDOM = $("#random_start_number");
 	numDOM.attr('value', getRandomIntInclusive(19,120));
-	var randomNum = numDOM.attr('value');
+	randomNum = numDOM.attr('value');
 	numDOM.text(randomNum);
 }
 
+
+function gameStart() {
+totalScore = 0;
+scoreDOM.text("0");
 generateCrystalNumber();
 generateGameStartNumber();
 
+}
+
 $(".crystals-grp").on("click", function() {
-	var score = $("#total_score");
+
 	
 	totalScore = totalScore + parseInt($(this).attr("value"));
    
-    score.text(totalScore);
+    scoreDOM.text(totalScore); 
+
+    if (totalScore == randomNum) {
+    	alert("you win!");
+    	wins++;
+    	winDOM.text("Wins: " + wins);
+    	gameStart();
+    }
+
+    if (totalScore > randomNum) {
+    	alert("you lose!")
+    	losses++;
+    	lossDOM.text("Losses: " + losses);
+    	gameStart();
+    }
 
 
 });
+
+gameStart();
