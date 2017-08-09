@@ -12,20 +12,25 @@
 
 <body>
 
-  <h1>Crystals Collector!</h1>
-  
+  <header>
+    <h1>Crystals Collector!</h1>
+  </header>
   <div class="container"> 
     
     <div class="row">
-      <div class="col-md-4"> 
-        <div class="subtext" id="random_start_number">number here</div>
+      <div class="col-md-4 number-container" style="height: 418px;""> 
+        <div class="number-border">
+          <div class="number"> 
+            <p class="subtext" id="random_start_number">number here</p>
+          </div>
+        </div>
       </div> 
       <div class="col-md-8">
-        <p class="instuctions"> You will be given a random number at the start of the game.<br><br>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br><br>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. <br><br>The value of each crystal is hidden from you until you click on it.<br><br>Each time when the game starts, the game will change the values of each crystal.</p>
+        <p class="instructions"> You will be given a random number at the start of the game.<br><br>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br><br>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. <br><br>The value of each crystal is hidden from you until you click on it.<br><br>Each time when the game starts, the game will change the values of each crystal.</p>
       </div>
     </div> 
     
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-12">
         <div class="castle-container">
           <div class="section" id="pony-img">
@@ -38,13 +43,12 @@
           </div>  
         </div>  
       </div>
-    </div>
+    </div> -->
 
     <div class="row">     
       <div class="col-md-3">
-        <div class="section">
-          <p class="subtext">Current score:</p>
-          <div id="total_score"></div>    
+        <div class="section score-container">
+          <p class="subtext" id="total_score">Score: </p>  
         </div>
       </div>
      
@@ -58,7 +62,7 @@
       </div>
 
       <div class="col-md-3">
-        <div class="section" id="wins_losses_box">
+        <div class="section wins_losses_container">
           <div id="wins_section">
             <p class="subtext" id="wins">Wins: </p>  
           </div>

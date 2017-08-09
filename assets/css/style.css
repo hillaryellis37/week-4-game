@@ -2,15 +2,87 @@ body {
 	background-image: url(../images/skulls.png);
 }
 
+header {
+	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);
+/*	background-image: url(https://ae01.alicdn.com/kf/HTB1X2KRQFXXXXaRXXXXq6xXFXXXF/SHENGYONGBAO-Vinyl-Custom-Photography-Backdrops-Prop-Photo-Studio-font-b-Background-b-font-font-b-Rainbow.jpg);*/
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	width: 100%;
+}
+
+header h1 {
+	margin: 0;
+	padding: 0;
+	
+	font-family: 'Fontdiner Swanky', cursive;
+	font-size: 48pt;
+}
+
+
+.number-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.number-border {
+	height:55%;
+	width:55%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+/*	border: 3px solid #BADA55;*/
+/*  	padding: 5px 5px 5px 5px;
+    background-image: linear-gradient(to bottom, rgba(245, 245, 245, 0.97) 50%, rgba(219, 241, 248, 0.12) 100%), linear-gradient(to bottom, rgba(247, 247, 223, 0.07) 60%, #75ccd2 100%);
+    background-clip: content-box, padding-box;*/
+}
+
+.number {
+	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);
+	background-size: cover;
+	height:80%;
+	width:80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+/*	border: 3px solid #8278ff;*/
+
+}
+
+#random_start_number {
+	font-size: 140px;
+    font-weight: bold;
+    text-shadow: #bee9f8 1px 1px, #000 2px 2px, #000 3px 3px;
+}
+
 .section {
+
 	height: 35%;
 	width: 25%;
 /*	background-color: yellow;*/
 
 }
 
-.castle-container, 
 .crystal-container {
+	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+.crystals-grp {
+	width: 80%
+	height: 80%;
+	padding: 10px;
+}
+
+.castle-container, {
 	display: flex;
 	justify-content: space-between;
 /*	background-color: yellow;*/
@@ -20,11 +92,44 @@ body {
 	background-image: url(http://img00.deviantart.net/6f74/i/2013/158/a/f/background__ponyville_outskirts__s02e17__by_crasydwarf-d5v2ehm.png);
 }
 
+.wins_losses_container {
+	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);
+	background-size: cover;
+/*	display: flex;*/
+/*	align-items: center;*/
+/*	justify-content: center;*/
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+
+
+
+.score-container {
+	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+
+.instructions {
+/*	font-family: 'Amatic SC', cursive;*/
+/*	font-family: 'Sacramento', cursive;*/
+	font-family: 'Schoolbell', cursive;
+/*	font-family: 'Fontdiner Swanky', cursive;*/
+	font-size: 18pt;
+
+}
+
 .subtext {
 /*	font-family: 'Amatic SC', cursive;
 	font-family: 'Sacramento', cursive;
 	font-family: 'Schoolbell', cursive;
 	font-family: 'Fontdiner Swanky', cursive;*/
-	font-family: 'Loved by the King', cursive;
-	font-size: 18pt;
+	font-family: 'Schoolbell', cursive;
+	font-size: 30pt;
 }

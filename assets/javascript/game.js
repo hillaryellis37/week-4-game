@@ -64,7 +64,7 @@ function generateGameStartNumber() {
 
 function gameStart() {
 totalScore = 0;
-scoreDOM.text("0");
+scoreDOM.text("Score: 0");
 generateCrystalNumber();
 generateGameStartNumber();
 
@@ -75,7 +75,7 @@ $(".crystals-grp").on("click", function() {
 	
 	totalScore = totalScore + parseInt($(this).attr("value"));
    
-    scoreDOM.text(totalScore); 
+    scoreDOM.text("Score: " + totalScore); 
 
     if (totalScore == randomNum) {
     	alert("you win!");
