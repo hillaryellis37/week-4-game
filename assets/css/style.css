@@ -11,16 +11,23 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100px;
+	height: 150px;
 	width: 100%;
+	padding: 50px;
+    border-bottom: 3px solid white;
+  	padding: 0px 0px 5px 0px;
+    
+/*    background-clip: content-box, padding-box;*/
+
 }
 
 header h1 {
 	margin: 0;
 	padding: 0;
-	
 	font-family: 'Fontdiner Swanky', cursive;
 	font-size: 48pt;
+	font-weight: bold;
+    text-shadow: #bee9f8 1px 1px, #000 2px 2px, #000 3px 3px;
 }
 
 
@@ -42,13 +49,17 @@ header h1 {
 }
 
 .number {
-	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);
+/*	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);*/
+	background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d9/b1/cb/d9b1cb239d8d5d42ae0ae924ece034a0.jpg);
 	background-size: cover;
-	height:80%;
-	width:80%;
+	border-radius: 25px;
+	height:90%;
+	width:90%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border-bottom: 3px solid white;
+  	padding: 0px 0px 5px 0px;
 /*	border: 3px solid #8278ff;*/
 
 }
@@ -57,29 +68,44 @@ header h1 {
 	font-size: 140px;
     font-weight: bold;
     text-shadow: #bee9f8 1px 1px, #000 2px 2px, #000 3px 3px;
+    padding: 50px;
 }
 
 .section {
 
-	height: 35%;
-	width: 25%;
+/*	height: 35%;
+	width: 25%;*/
 /*	background-color: yellow;*/
 
 }
 
 .crystal-container {
-	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);
+/*	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);*/
+	background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d9/b1/cb/d9b1cb239d8d5d42ae0ae924ece034a0.jpg);
 	background-size: cover;
+	border-radius: 25px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 10px;
+	height: 177px;
+	margin: 15px;
+	border-bottom: 3px solid white;
+  	padding: 0px 0px 5px 0px;
 }
 
+
+
+
 .crystals-grp {
-	width: 80%
-	height: 80%;
-	padding: 10px;
+
+	width: 25%;
+	padding: 0px 10px;
+
+}
+
+.crystals-grp:hover {
+	width: 30%;
 }
 
 .castle-container, {
@@ -93,27 +119,29 @@ header h1 {
 }
 
 .wins_losses_container {
-	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);
-	background-size: cover;
+/*	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);
+	background-size: cover;*/
 /*	display: flex;*/
 /*	align-items: center;*/
 /*	justify-content: center;*/
 	width: 100%;
-	height: 100%;
+	height: 177px;
 	padding: 10px;
+	margin: 15px;
 }
 
 
 
 .score-container {
-	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);
-	background-size: cover;
+/*	background-image: url(http://data.whicdn.com/images/65759650/original.jpg);
+	background-size: cover;*/
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: 100%;
+	height: 177px;
 	padding: 10px;
+	margin: 15px;
 }
 
 .instructions {
@@ -122,6 +150,8 @@ header h1 {
 	font-family: 'Schoolbell', cursive;
 /*	font-family: 'Fontdiner Swanky', cursive;*/
 	font-size: 18pt;
+	padding: 10px;
+	margin: 15px;
 
 }
 
