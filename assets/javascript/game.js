@@ -8,6 +8,7 @@ var scoreDOM = $("#total_score");
 var lossDOM = $("#losses");
 var winDOM = $("#wins");
 var playCount = 0;
+var gameOn = false;
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -37,7 +38,7 @@ function numberInArray(array, value) {
 
 function crystalShuffle() {
 	var count = 1;
-	var frame = setInterval(shuffle, 100);
+	var frame = setInterval(shuffle, 200);
 
 	function shuffle() {
 		
@@ -46,6 +47,10 @@ function crystalShuffle() {
 			console.log($("#crystal" + count).css("order"));
 			$("#crystal" + count).css("order", "1");
 			$("#crystal" + count).css("width", "30%");
+			$("#crystal" + count).css("opacity", "1");
+
+			var crystalAudio = new Audio("assets/audio/crystal" + count + ".mp3");
+			crystalAudio.play();
 			count++;
 		} 
 
@@ -54,13 +59,16 @@ function crystalShuffle() {
 			console.log($("#crystal" + count).css("order"));
 			$("#crystal" + count).css("order", "1");
 			$("#crystal" + count).css("width", "25%");
+			$("#crystal" + count).css("opacity", "1");
+			var crystalAudio = new Audio("assets/audio/crystal" + count + ".mp3");
+			crystalAudio.play();
 			count++;
 		}
 
 		else {
 			console.log("stop");
 			console.log(count);
-			$(".crystals-grp").css("width", "25%");
+			$(".crystals-grp").css("width", "30%");
 			$("#crystal1").css("order", "4");
 			$("#crystal2").css("order", "3");
 			$("#crystal3").css("order", "2");
@@ -124,49 +132,68 @@ function generateGameStartNumber() {
 
 function gameStart() {
 	playCount++;
-	if (playCount > 1) {
-		numDOM.text("Click here to play again!");
-		numDOM.css("font-size", "40px");
-		numDOM.css("opacity", "1");
-	}
-	$(".crystals-grp").css("width", "25%");
+		
+	setTimeout(function() {
+		if (playCount > 1) {
+			numDOM.text("Click here to play again!");
+			numDOM.css("font-size", "40px");
+			numDOM.css("opacity", "1");
+			$(".crystals-grp").css("opacity", ".5");
+			$(".crystals-grp").css("width", "25%");
+		}
+	}, 4000);
+	
 	totalScore = 0;
 	scoreDOM.text("Score: 0");
 
 }
 $("#random_start_number").click(function () {
-
+gameOn = true;
 generateCrystalNumber();
 generateGameStartNumber();
 crystalShuffle();
 crystalShuffle();
-setTimeout(crystalShuffle, (parseInt(randomNum)*20)-(100*4));
+setTimeout(crystalShuffle, (parseInt(randomNum)*20)-(200*4));
 
 });
 
 $(".crystals-grp").on("click", function() {
-	$(".crystals-grp").css("width", "25%");
-	$(this).css("width", "50%");
-	
-	totalScore = totalScore + parseInt($(this).attr("value"));
-   
-    scoreDOM.text("Score: " + totalScore); 
+	if (gameOn === true) {
 
-    if (totalScore == randomNum) {
-    	alert("you win!");
-    	wins++;
-    	winDOM.text("Wins: " + wins);
-    	gameStart();
+		$(".crystals-grp").css("width", "25%");
+		$(this).css("width", "45%");
+		
+		totalScore = totalScore + parseInt($(this).attr("value"));
+	   
+	    scoreDOM.text("Score: " + totalScore); 
 
-    }
+	    if (totalScore == randomNum) {
+	    	alert("you win!");
+	    	wins++;
+	    	numDOM.text("You win!");
+			numDOM.css("font-size", "40px");
+	    	var winAudio = new Audio("assets/audio/win2.mp3");
+			winAudio.play();
+	    	winDOM.text("Wins: " + wins);
+	    	gameStart();
+	    	gameOn = false;
 
-    if (totalScore > randomNum) {
-    	alert("you lose!")
-    	losses++;
-    	lossDOM.text("Losses: " + losses);
-    	gameStart();
-    }
+	    }
 
+	    if (totalScore > randomNum) {
+	    	alert("you lose!")
+	    	losses++;
+	    	numDOM.text("You lose!");
+			numDOM.css("font-size", "40px");
+	    	var loseAudio = new Audio("assets/audio/lose2.mp3");
+			loseAudio.play();
+	    	lossDOM.text("Losses: " + losses);
+	    	gameStart();
+	    	gameOn = false;
+	    }
+	} else {
+		null
+	}
 
 });
 

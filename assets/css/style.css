@@ -102,6 +102,7 @@ header h1 {
 
 	width: 25%;
 	padding: 0px 10px;
+	opacity: .5;
 }
 
 .crystals-grp:hover {
