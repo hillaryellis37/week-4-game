@@ -53,8 +53,8 @@ header h1 {
 	background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d9/b1/cb/d9b1cb239d8d5d42ae0ae924ece034a0.jpg);
 	background-size: cover;
 	border-radius: 25px;
-	height:90%;
-	width:90%;
+	height:100%;
+	width:100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -68,7 +68,7 @@ header h1 {
 	font-size: 140px;
     font-weight: bold;
     text-shadow: #bee9f8 1px 1px, #000 2px 2px, #000 3px 3px;
-    padding: 50px;
+/*    padding: 50px;*/
 }
 
 .section {
@@ -101,11 +101,23 @@ header h1 {
 
 	width: 25%;
 	padding: 0px 10px;
-
 }
 
 .crystals-grp:hover {
 	width: 30%;
+}
+
+#crystal1 {
+	order: 4;
+}
+#crystal2 {
+	order: 3;
+}
+#crystal3 {
+	order: 2;
+}
+#crystal4 {
+	order: 1;
 }
 
 .castle-container, {

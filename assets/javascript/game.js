@@ -36,6 +36,7 @@ function numberInArray(array, value) {
 
 function generateCrystalNumber() {
 	var count = 0;
+	
 	for (var i = 1; crystalNumberArray.length < 4; i++) {
 		var crystalId = $("#crystal" + i);	
 		crystalId.attr('value', getRandomIntInclusive(1,12));
@@ -58,7 +59,21 @@ function generateCrystalNumber() {
 function generateGameStartNumber() {
 	numDOM.attr('value', getRandomIntInclusive(19,120));
 	randomNum = numDOM.attr('value');
-	numDOM.text(randomNum);
+	// numDOM.text(randomNum);
+	var interval = setInterval(frame, 20);
+	var numMatch = 0;
+	var num = parseInt(randomNum);
+
+	function frame() {	
+		if (numMatch === num) {
+			clearInterval(interval);
+			numDOM.text(num);
+		} else {
+			numMatch++;
+			numDOM.text(numMatch);
+		}
+
+	}
 }
 
 
