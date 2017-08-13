@@ -159,7 +159,7 @@ $(".crystals-grp").on("click", function() {
 	if (gameOn === true) {
 
 		$(".crystals-grp").css("width", "25%");
-		$(this).css("width", "45%");
+		$(this).css("width", "40%");
 		
 		totalScore = totalScore + parseInt($(this).attr("value"));
 	   
